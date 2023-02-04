@@ -499,51 +499,159 @@ class _HomeScreenState extends State<HomeScreen> {
     Widget leftsideWidget(){
       return Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Handmade,",style: Theme.of(context).textTheme.headline1,),
-              Text("with an Extra",style: Theme.of(context).textTheme.headline1,),
-              Text("Pinch of Love",style: Theme.of(context).textTheme.headline1,),
-              const SizedBox(height: 15,),
-              Text("We prepare out breads daily and that's where the\ncharming smell comes from.",style: Theme.of(context).textTheme.subtitle1,),
-              const SizedBox(height: 50,),
-              Row(
-                children: [
-                  Text("Get Info",style: Theme.of(context).textTheme.bodyText1,),
-                  const SizedBox(width: 10,),
-                  const  Icon(Icons.arrow_forward_outlined,color: Color(0xff020202),),
-                  const SizedBox(width: 40,),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                    decoration:const BoxDecoration(
-                        color: Color(0xff020202),
-                        borderRadius: BorderRadius.all(Radius.circular(30))
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                          decoration:BoxDecoration(
-                              color: Color(0xffc84042),
-                              shape: BoxShape.circle,
-                              border: Border.all(color: Colors.white)
+          Container(
+            padding: const EdgeInsets.only(left: 180,top: 5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text("Handmade,",style: Theme.of(context).textTheme.headline1,),
+                Text("with an Extra",style: Theme.of(context).textTheme.headline1,),
+                Text("Pinch of Love",style: Theme.of(context).textTheme.headline1,),
+                const SizedBox(height: 15,),
+                Text("We prepare out breads daily and that's where the\ncharming smell comes from.",style: Theme.of(context).textTheme.subtitle1,),
+                const SizedBox(height: 40,),
+                Row(
+                  children: [
+                    Text("Get Info",style: Theme.of(context).textTheme.bodyText1,),
+                    const SizedBox(width: 10,),
+                    const  Icon(Icons.arrow_forward_outlined,color: Color(0xff020202),),
+                    const SizedBox(width: 40,),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                      decoration:const BoxDecoration(
+                          color: Color(0xff020202),
+                          borderRadius: BorderRadius.all(Radius.circular(30))
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 7,vertical: 7),
+                            decoration:BoxDecoration(
+                                color: Color(0xffc84042),
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.white,width: 2)
+                            ),
+                            child: Icon(Icons.badge,color: Colors.white,size: 15,),
                           ),
-                          child: Icon(Icons.badge,color: Colors.white,),
-                        ),
-                        const SizedBox(width: 20,),
-                        const  Text("Online Shop",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w900,fontSize: 20),),
-                        const SizedBox(width: 10,),
-                      ],
-                    ),
-                  )
-                ],)
+                          const SizedBox(width: 20,),
+                          const  Text("Online Shop",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w900,fontSize: 18),),
+                          const SizedBox(width: 10,),
+                        ],
+                      ),
+                    )
+                  ],)
 
+              ],),
+          ),
+
+          Container(
+            alignment: Alignment.bottomRight,
+            margin: const EdgeInsets.only(top: 100),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              const  SizedBox(height: 50,),
+              Text("Daily, fresh and \nalways tasty",style: Theme.of(context).textTheme.bodyText2,),
+              const SizedBox(height: 20,),
+              Text("To get more information contact \nus or send us an email for more \ninformation.",style: Theme.of(context).textTheme.subtitle1,),
             ],),
-          
-          
-          Image.asset("assets/images/brad.png")
+          ),
+        ],
+      );
+    }
+
+
+
+
+    Widget rightsideWidget(){
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+            ),
+            child: Image.asset("assets/images/newbgimg.png"),
+          ),
+
+          Container(
+            alignment: Alignment.bottomRight,
+            margin: const EdgeInsets.only(top:0,left: 150),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row( crossAxisAlignment: CrossAxisAlignment.start,mainAxisAlignment: MainAxisAlignment.start,children: [Container(
+                      padding: const EdgeInsets.only(right: 10),
+                      decoration:const BoxDecoration(
+                          color: Color(0xff2c2c2c),
+                          borderRadius: BorderRadius.all(Radius.circular(30))
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 12),
+                            decoration:BoxDecoration(
+                                color: const Color(0xffc84042),
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.white,width: 2)
+                            ),
+                            child: const Icon(Icons.check,color: Colors.white,size: 18,),
+                          ),
+                          const SizedBox(width: 20,),
+                          const  Text("Your top choice",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w100,fontSize: 11),),
+                          const SizedBox(width: 20,),
+                        ],
+                      ),
+                    ),],),
+
+
+                    const SizedBox(height: 20,),
+                    Row(crossAxisAlignment: CrossAxisAlignment.start,mainAxisAlignment: MainAxisAlignment.start,children: [Container(
+                      padding: const EdgeInsets.only(right: 10),
+                      decoration:const BoxDecoration(
+                          color: Color(0xff2c2c2c),
+                          borderRadius: BorderRadius.all(Radius.circular(30))
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 12),
+                            decoration:BoxDecoration(
+                                color: const Color(0xffc84042),
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.white,width: 2)
+                            ),
+                            child: const Icon(Icons.check,color: Colors.white,size: 18,),
+                          ),
+                          const SizedBox(width: 20,),
+                          const  Text("Fastest in the business",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w100,fontSize: 11),),
+                          const SizedBox(width: 20,),
+                        ],
+                      ),
+                    )],),
+
+                  ],),
+                //bggirls
+
+                const SizedBox(width: 20,),
+                Container(
+                  decoration: const BoxDecoration(
+                  ),
+                  child: Image.asset("assets/images/girlwithphone.png"),
+                ),
+              ],
+            ),
+          ),
         ],
       );
     }
@@ -552,20 +660,178 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SizedBox(
         width: size.width,
         height: size.height,
-        child: ListView(
+        child: Stack(
           children: [
-            AppBarWidget(),
 
-            SizedBox( width: size.width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-              Container(width: size.width *0.45,
-              padding: const EdgeInsets.only(left: 80,top: 5),
-              child: leftsideWidget(),
+            Positioned(
+              bottom:-size.height*0.4,
+              right: -size.width*0.4,
+              child: Container(width: size.width,height: size.height,
+                decoration: const BoxDecoration(
+                    color: Color(0xff020202),
+                    shape: BoxShape.circle
+                ),
               ),
-              Container(width: size.width *0.45,height: size.height*0.78,color: Colors.blue),
-            ],),)
+            ),
+
+            Positioned(
+              bottom:-size.height*0.4,
+              right: -size.width*0.3,
+              child: Container(width: size.width,height: size.height,
+                decoration: const BoxDecoration(
+                  color: Color(0xff020202),
+                  shape: BoxShape.circle
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 200,
+              left: 500,
+              child: Container(width: 57,height: 57,
+                decoration: const BoxDecoration(
+                ),
+                child: Image.asset("assets/images/flayers.jpg"),
+              ),
+            ),
+            Positioned(
+              top: 200,
+              left: 100,
+              child: Container(width: 57,height: 57,
+                decoration: const BoxDecoration(
+                ),
+                child: Image.asset("assets/images/flayers.jpg"),
+              ),
+
+            ),
+            Positioned(
+              top: 200,
+              left: 900,
+              child: Container(width: 57,height: 57,
+                decoration: const BoxDecoration(
+                ),
+                child: Image.asset("assets/images/flayers.jpg"),
+              ),
+
+            ),
+            Positioned(
+              top: 400,
+              left: 100,
+              child: Container(width: 7,height: 7,
+                decoration: const BoxDecoration(
+                    color: Color(0XFFc73f3f),
+                    shape: BoxShape.circle
+                ),),
+            ),
+            Positioned(
+              top: 490,
+              left: 120,
+              child: Container(width: 9,height: 9,
+                decoration: const BoxDecoration(
+                    color: Color(0xff020202),
+                    shape: BoxShape.circle
+                ),),
+            ),
+            Positioned(
+              top: 220,
+              left: 500,
+              child: Container(width: 9,height: 9,
+                decoration: const BoxDecoration(
+                    color: Color(0xff020202),
+                    shape: BoxShape.circle
+                ),),
+            ),
+            Positioned(
+              top: 180,
+              left: 490,
+              child: Container(width: 7,height: 7,
+                decoration: const BoxDecoration(
+                    color: Color(0XFFc73f3f),
+                    shape: BoxShape.circle
+                ),),
+            ),
+            Positioned(
+              top: 250,
+              left: 530,
+              child: Container(width: 14,height: 14,
+                decoration: const BoxDecoration(
+                    color: Color(0XFFc73f3f),
+                    shape: BoxShape.circle
+                ),),
+            ),
+
+
+            Positioned(
+              top: 350,
+              left: 630,
+              child: Container(width: 14,height: 14,
+                decoration: const BoxDecoration(
+                    color: Color(0xff020202),
+                    shape: BoxShape.circle
+                ),),
+            ),
+
+
+
+            Positioned(
+              top: 220,
+              right: 200,
+              child: Container(width: 9,height: 9,
+                decoration: const BoxDecoration(
+                    color: Color(0xff020202),
+                    shape: BoxShape.circle
+                ),),
+            ),
+            Positioned(
+              top: 180,
+              right: 250,
+              child: Container(width: 7,height: 7,
+                decoration: const BoxDecoration(
+                    color: Color(0XFFc73f3f),
+                    shape: BoxShape.circle
+                ),),
+            ),
+            Positioned(
+              top: 250,
+              right: 230,
+              child: Container(width: 14,height: 14,
+                decoration: const BoxDecoration(
+                    color: Color(0XFFc73f3f),
+                    shape: BoxShape.circle
+                ),),
+            ),
+
+
+            Positioned(
+              top: 500,
+              left: 150,
+              child: Container(width: 14,height: 14,
+              decoration: const BoxDecoration(
+                color: Color(0XFFc73f3f),
+                shape: BoxShape.circle
+              ),),
+            ),
+
+            Align(alignment: Alignment.bottomLeft,child: Image.asset("assets/images/bread.png")),
+
+
+            ListView(
+              children: [
+                AppBarWidget(),
+
+                SizedBox( width: size.width,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  SizedBox(
+                    width: size.width *0.5,
+                  child: leftsideWidget(),
+                  ),
+                  SizedBox(width: size.width *0.5,
+                    child: rightsideWidget(),),
+                ],),)
+              ],
+            ),
           ],
         ),
       ),

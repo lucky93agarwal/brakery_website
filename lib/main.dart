@@ -27,9 +27,11 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.white,
         primarySwatch: Colors.blue,
         textTheme:const TextTheme(
-          bodyText1: TextStyle(color: Color(0xff020202),fontWeight: FontWeight.w900,fontSize: 17),
-          headline1: TextStyle(color: Color(0xff020202),fontSize: 50,fontWeight: FontWeight.w900),
-          subtitle1: TextStyle(color: Color(0xffa4a4a2),fontSize: 15,fontWeight: FontWeight.normal),
+          bodyText1: TextStyle(color: Color(0xff020202),fontWeight: FontWeight.w900,fontSize: 15),
+          bodyText2: TextStyle(color: Color(0xff020202),fontWeight: FontWeight.w900,fontSize: 17),
+          headline1: TextStyle(color: Color(0xff020202),fontSize: 45,fontWeight: FontWeight.w900),
+          subtitle1: TextStyle(color: Color(0xffa4a4a2),fontSize: 13,fontWeight: FontWeight.normal),
+
         )
       ),
       home: const HomeScreen(),
